@@ -53,13 +53,13 @@ class AdTime:
     async def start_timer(self, twitch):
         original_scene = self.ws.call(obs_requests.GetCurrentProgramScene()).datain.get(
             'currentProgramSceneName')
-        self.ws.call(obs_requests.SetCurrentProgramScene(sceneName='Ad Scene'))
-        await asyncio.sleep(3 * 60)
-        self.ws.call(obs_requests.SetCurrentProgramScene(sceneName=original_scene))
+        # self.ws.call(obs_requests.SetCurrentProgramScene(sceneName='Ad Scene'))
+        # await asyncio.sleep(3 * 60)
+        # self.ws.call(obs_requests.SetCurrentProgramScene(sceneName=original_scene))
 
         sound_55 = "ad_warning.mp3"
         sound_57 = "ad_start_alert.mp3"
-        original_scene = self.ws.call(obs_requests.GetCurrentProgramScene()).datain.get('currentProgramSceneName')
+        # original_scene = self.ws.call(obs_requests.GetCurrentProgramScene()).datain.get('currentProgramSceneName')
         ad_scene = "Ad Scene"  # Scene to switch to for ad break
 
         warning_minutes = 55
